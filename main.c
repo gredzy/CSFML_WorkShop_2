@@ -32,6 +32,8 @@ void startgame(wdw *wind_struct)
 void start(wdw *wind_struct)
 {
     int rep = startmenu(wind_struct);
+    if (rep == EXIT)
+        exit(0);
     startgame(wind_struct);
     free_double(wind_struct->gamestruct->map);
 }
